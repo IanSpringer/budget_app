@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budget App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="../js/main.js"></script>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+<form action="/api/bills" method="POST">
+  <input type="text" name="billName" placeholder="Add Bill">
+  <input type="number" name="amount" placeholder="Monthly Amount">
+  <input type="radio" name="paid" value="true">Paid
+  <input type="radio" name="paid" value="false">Unpaid
+  <button type="submit" id="submitBill">Submit</button>
+</form>
+
+<table>
+ <tr>
+   <th>Bill</th>
+   <th>Amount</th>
+   <th>Status</th>
+ </tr>
+ <tbody id="tbody"></tbody>
+</table>
+
+</body>
+</html>
