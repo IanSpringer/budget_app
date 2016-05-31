@@ -49,17 +49,16 @@ controller.update = function(req, res){
           res.json(bill)
           // res.redirect('/')
          });
-      }else{
-        Bill.findOneAndUpdate(
-          {_id: id},
-          {paid: true},
-         function(err, bill){
-          if (err) {
-            throw err;
-          }
-          res.json(bill)
-          // res.redirect('/')
-         });
+    }else{
+      Bill.findOneAndUpdate(
+        {_id: id},
+        {paid: true},
+        function(err, bill){
+        if (err) {
+          throw err;
+        }
+         res.json(bill)
+        });
 
       }
     })
