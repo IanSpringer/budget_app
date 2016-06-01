@@ -3,31 +3,58 @@
 <head>
   <title>Budget App</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="../js/main.js"></script>
   <link rel="stylesheet" href="../css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <h1>iBudget!</h1>
+  <h1 class="header">iBudget!</h1>
 <form action="/api/bills" method="POST">
   <input type="text" name="billName" placeholder="Add Bill">
   <input type="number" name="amount" placeholder="Monthly Amount">
-  <input type="radio" name="paid" value="true">Paid
-  <input type="radio" name="paid" value="false">Unpaid
-  <button type="submit" id="submitBill">Submit</button>
+  <button type="submit" class="btn btn-success btn-sm" id="submitBill">Submit</button>
 </form>
 
-<table>
- <tr>
-   <th>Bill</th>
-   <th>Amount</th>
-   <th>Status</th>
- </tr>
- <tbody id="tbody"></tbody>
- <hr>
- <tr>
-  <td id="total">Total</th>
-  <td id="amountTotal"></td>
-</table>
+<div class="overflow">
+  <table class="table table-hover">
+   <tr>
+     <th>Bill</th>
+     <th>Amount</th>
+     <th>Status</th>
+   </tr>
+   <tbody id="tbody"></tbody>
+   <tr>
+     <td id="total">Total</td>
+     <td id="amountTotal"></td>
+   <tr>
+   <tr>
+     <td id="totalDue"><strong>Amount Still Due</strong></td>
+     <td id="amountDue"></td>
+   </tr>
+  </table>
+    <form action="/api/deposits" method="POST"  style="margin-top:3%;">
+      <input type="number" name="deposit" placeholder="Add Deposit">
+      <button type="submit" class="btn btn-success btn-sm" id="submitDeposit">Submit</button>
+    </form>
+<div class="overflow">
+  <table class="table table-hover">
+     <tr>
+       <th>Date</th>
+       <th>Deposit</th>
+     </tr>
+     <tbody id="tbody1"></tbody>
+     <tr>
+       <td id="total">Total</td>
+       <td id="depositTotal"></td>
+     <tr>
+     <tr>
+       <td id="balance"><strong>Balance</strong></td>
+       <td id="balanceAmount"></td>
+     </tr>
+  </table>
+</div>
+</div>
 
 </body>
 </html>

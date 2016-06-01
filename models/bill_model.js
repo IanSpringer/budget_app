@@ -8,6 +8,6 @@ var billSchema = new mongoose.Schema({
 
 var Bill = mongoose.model('Bill', billSchema);
 
-// equipment.loadOTo(person);
+
 
 module.exports = Bill;

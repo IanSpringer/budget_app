@@ -9,6 +9,7 @@ var logger = require('morgan');
 var path = require('path');
 var db = require('./db.js')
 var billsController = require('./controllers/bills_controller.js')
+var depositController = require('./controllers/deposit_controller.js')
 
 
 app.use(logger('dev'))
@@ -30,6 +31,13 @@ app.route('/api/bills')
 app.route('/api/bills/:id')
   .delete(billsController.destroy)
   .put(billsController.update);
+
+app.route('/api/deposits')
+  .get(depositController.index)
+  .post(depositController.create)
+
+app.route('/api/deposits/:id')
+  .delete(depositController.destroy)
 
 
 

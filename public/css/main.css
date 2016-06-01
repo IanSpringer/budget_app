@@ -1,3 +1,13 @@
 #total {
   font-weight: bold;
 }
+
+.header {
+  color: #404040;
+}
+
+body {
+  margin: 2%;
+  font-family: 'Titillium Web', sans-serif;
+
+}
