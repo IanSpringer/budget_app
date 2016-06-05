@@ -7,13 +7,21 @@
   <script src="../js/main.js"></script>
   <link rel="stylesheet" href="../css/main.css">
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-</head>
+    <!-- <script src='jquery.js'></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.js"></script> </head>
 <body>
   <h1 class="header">iBudget!</h1>
-<form action="/api/bills" method="POST">
+
+  <ul class="nav nav-tabs" style="margin-bottom: 2%;">
+    <li class="active"><a href="/">Bills</a></li>
+    <li><a href="/deposits">Deposits</a></li>
+    <li><a href="/summary">Summary</a></li>
+  </ul>
+
+  <form action="/api/bills" method="POST">
   <input type="text" name="billName" placeholder="Add Bill">
   <input type="number" name="amount" placeholder="Monthly Amount">
-  <button type="submit" class="btn btn-success btn-sm" id="submitBill">Submit</button>
+  <button type="submit" class="btn btn-success btn-sm" style="margin:1%;" id="submitBill">Submit</button>
 </form>
 
 <div class="overflow">
@@ -33,28 +41,8 @@
      <td id="amountDue"></td>
    </tr>
   </table>
-    <form action="/api/deposits" method="POST"  style="margin-top:3%;">
-      <input type="number" name="deposit" placeholder="Add Deposit">
-      <button type="submit" class="btn btn-success btn-sm" id="submitDeposit">Submit</button>
-    </form>
-<div class="overflow">
-  <table class="table table-hover">
-     <tr>
-       <th>Date</th>
-       <th>Deposit</th>
-     </tr>
-     <tbody id="tbody1"></tbody>
-     <tr>
-       <td id="total">Total</td>
-       <td id="depositTotal"></td>
-     <tr>
-     <tr>
-       <td id="balance"><strong>Balance</strong></td>
-       <td id="balanceAmount"></td>
-     </tr>
-  </table>
-</div>
-</div>
+
+
 
 </body>
 </html>

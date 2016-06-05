@@ -5,7 +5,13 @@ var totalDue = 0;
 var totalDeposits = 0;
 var balance = 0;
 $( document ).ready(function() {
+
     console.log( "ready!" );
+//     $('.header').transition({
+//   perspective: '100px',
+//   rotate3d: '1,1,0,180deg'
+// });
+    $('.header').transition({ opacity: .08 }).transition({opacity: .9});
 
     $.ajax({
       url: '/api/bills',

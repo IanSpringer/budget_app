@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Budget App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="../js/main.js"></script>
+  <link rel="stylesheet" href="../css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <h1 class="header">iBudget!</h1>
+
+
+  <ul class="nav nav-tabs" style="margin-bottom: 2%;">
+    <li ><a href="/">Bills</a></li>
+    <li class="active"><a href="/deposits">Deposits</a></li>
+    <li><a href="/summary">Summary</a></li>
+  </ul>
+
+<div class="overflow">
+  <table class="table table-hover">
+    <form action="/api/deposits" method="POST"  style="margin-top:3%;">
+        <input type="number" name="deposit" placeholder="Add Deposit">
+        <button type="submit" class="btn btn-success btn-sm" style="margin:1%;" id="submitDeposit">Submit</button>
+      </form>
+     <tr>
+       <th>Date</th>
+       <th>Deposit</th>
+     </tr>
+     <tbody id="tbody1"></tbody>
+     <tr>
+       <td id="total">Total</td>
+       <td id="depositTotal"></td>
+     <tr>
+     <tr>
+       <td id="balance"><strong>Balance</strong></td>
+       <td id="balanceAmount"></td>
+     </tr>
+  </table>
+</div>
+</div>
+
+</body>

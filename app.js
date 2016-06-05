@@ -24,6 +24,16 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname + '/views/index.html'))
 })
 
+app.get('/deposits', function(req, res){
+  res.sendFile(path.join(__dirname + '/views/deposits.html'))
+})
+
+app.get('/summary', function(req, res){
+  res.sendFile(path.join(__dirname + '/views/summary.html'))
+})
+
+
+
 app.route('/api/bills')
   .get(billsController.index)
   .post(billsController.create)

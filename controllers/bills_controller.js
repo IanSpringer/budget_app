@@ -58,6 +58,7 @@ controller.update = function(req, res){
           throw err;
         }
          res.json(bill)
+         // res.redirect('/')
         });
 
       }

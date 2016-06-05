@@ -22,7 +22,7 @@ controller.create = function(req, res){
   })
   deposit.save(function(err, deposit){
     if (err) throw err;
-    res.redirect('/')
+    res.redirect('/deposits')
 
   })
 }
